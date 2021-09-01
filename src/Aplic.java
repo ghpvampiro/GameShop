@@ -62,8 +62,21 @@ public class Aplic {
                     System.out.println("Digite a quantidade de horas que deseja Jogar:");
                     tempJog = entrada.nextDouble();
                     
+                    if (tempJog < gm.getQtdeHoras())
+                    {
                     gm.jogar(tempJog);
                     System.out.println("Você gastou " + tempJog + " Horas e agora possui em sua conta " + gm.getQtdeHoras() + " Horas!");
+                    
+                    }
+                    else 
+                    {
+                    System.out.println("ERRO! Quantidade de horas digita é maior que o número de horas disponível!!!");
+                    System.out.println("Você precisa de mais " + (tempJog - gm.getQtdeHoras()) + " horas para efetuar esta ação!!!");
+                    }
+                    
+                    
+                    
+                    
                     
                     break;
 
